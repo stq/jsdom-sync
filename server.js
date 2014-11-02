@@ -12,7 +12,6 @@ if (process.platform === "win32"){
 }
 
 process.on ("SIGINT", function(){
-    //process.exit ();
 });
 
 
@@ -26,7 +25,7 @@ function start( options, onReady ) {
     var changes = [];
 
     var src = [];
-    src.push(fs.readFileSync("./jquery.min.js", "utf-8"));
+    src.push(fs.readFileSync(__dirname + "/jquery.min.js", "utf-8"));
     _.each(options.scripts, function(script) {
         src.push(fs.readFileSync(script, "utf-8" ));
     });
@@ -142,8 +141,8 @@ function start( options, onReady ) {
         var app = require( 'http' ).createServer( function( rq, rs ) {
             rs.writeHead( 200 );
             rs.write( '<html><head><script type="application/javascript">' );
-            rs.write( fs.readFileSync( "./socket.io-1.0.4.js", "utf-8" ) );
-            rs.write( fs.readFileSync( "./client.js", "utf-8" ) );
+            rs.write( fs.readFileSync( __dirname + "/socket.io-1.0.4.js", "utf-8" ) );
+            rs.write( fs.readFileSync( __dirname + "/client.js", "utf-8" ) );
             rs.write( '</script></head><body></body></html>' );
             rs.end();
         } );
