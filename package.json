@@ -7,7 +7,6 @@
     "test": "test"
   },
   "scripts": {
-    "test": "node test/script.js",
     "start": "node server.js"
   },
   "repository": {
