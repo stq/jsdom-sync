@@ -67,3 +67,8 @@ Limitations
 
 1. Jquery is required to be in DOM page (beacause it uses .on to trach mutation events). May be fixed by rewriting with addEventListener.
 2. Heavy linked socket.io and jquery versions. May be fixed by adding proper dependencies.
+
+Dependencies
+------------
+
+I've added required node_modules as 7z archive just to simplify its installation on Windows 7 64 bit.
