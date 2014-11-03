@@ -1,6 +1,6 @@
 {
   "name": "jsdom-sync",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A tool to sync virtual DOM from jsdom with a browser",
   "main": "server.js",
   "directories": {
